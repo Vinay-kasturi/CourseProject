@@ -14,8 +14,12 @@ cleaned_df=df[['Event Type','Aircraft Type','New Operator','New Manager','New Ow
 #print(cleaned_df.shape)
 print(cleaned_df.info())
 print(cleaned_df)
+
+#Dataframe indexing and slicing
 cleaned_indexed_df = cleaned_df.set_index("Event Type")
 cleaned_indexed_df = cleaned_indexed_df.drop(["Finance","Lease End/Expiry","Deferred From","Sale & Lease-back","Transfer","Lease Start","Orders","Conversions (Non Freight)","Merger","LoI to Order","Cancellation","Deferral (Announced)","On Option","LoI to Option"])
+
+#Dataframe sorting
 Cleaned_sorted_df = cleaned_indexed_df.sort_values("Delivery Date")
 print(cleaned_indexed_df.info())
 
